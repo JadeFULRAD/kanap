@@ -25,6 +25,8 @@ const productsDisplay = (products) => {
 		listeProduit.innerHTML += `<a href="#">
 		<article>
 		<img src="${products[i].imageUrl}">
+		<h3 class="productName">${products[i].name}</h3>
+		<p class="productDescription">${products[i].description}
 		</article>
 		</a>`;
 	}
