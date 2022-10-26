@@ -22,7 +22,7 @@ const productsDisplay = (products) => {
 		/*let itemLink = document.createElement("a");*/
 		/*itemLink.setAttribute("href", products.html);
 	itemLink.appendChild(listeProduit);*/
-		listeProduit.innerHTML += `<a href="#">
+		listeProduit.innerHTML += `<a href="./product.html?id=107fb5b75607497b96722bda5b504926">
 		<article>
 		<img src="${products[i].imageUrl}">
 		<h3 class="productName">${products[i].name}</h3>
