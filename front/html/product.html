@@ -71,8 +71,12 @@
 			<div class="limitedWidthBlock">
 				<section class="item">
 					<article>
-						<div class="item__img">
-							<!-- <img src="../images/logo.png" alt="Photographie d'un canapé"> -->
+						<div>
+							<img
+								class="item__img"
+								src="../images/logo.png"
+								alt="Photographie d'un canapé"
+							/>
 						</div>
 						<div class="item__content">
 							<div class="item__content__titlePrice">
@@ -93,14 +97,16 @@
 								<div class="item__content__settings__color">
 									<label for="color-select">Choisir une couleur :</label>
 									<select name="color-select" id="colors">
-										<option value="">--SVP, choisissez une couleur --</option>
-										<!--                       <option value="vert">vert</option>
-                      <option value="blanc">blanc</option> -->
+										<option class="option1" value="">
+											--SVP, choisissez une couleur --
+										</option>
+										<option class="option2" value="vert"></option>
+										<option class="option3" value="blanc"></option>
 									</select>
 								</div>
 
 								<div class="item__content__settings__quantity">
-									<label for="itemQuantity"
+									<label id="labelQuantity" for="itemQuantity"
 										>Nombre d'article(s) (1-100) :</label
 									>
 									<input

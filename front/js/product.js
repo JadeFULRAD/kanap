@@ -15,16 +15,33 @@ const fetchProduitApi = () => {
 		.then((data) => {
 			// la Promise sera retourné si résolue
 			console.log("data", data);
-			productDisplay(data);
+
+			let productImg = document.querySelector(".item__img");
+			productImg.src = data.imageUrl;
+
+			document.querySelector("#price").innerHTML = data.price;
+			document.querySelector("#title").innerHTML = data.name;
+			document.querySelector("#description").innerHTML = data.description;
+			document.querySelector(".option1").innerHTML = data.colors[0];
+			document.querySelector(".option2").innerHTML = data.colors[1];
+			document.querySelector(".option3").innerHTML = data.colors[2];
+			document.querySelector(".option1").value = data.colors[0];
+			document.querySelector(".option2").value = data.colors[1];
+			document.querySelector(".option3").value = data.colors[2];
 		})
 		.catch((err) => console.log(err)); // Sinon cette fonction s'exécutera si une erreur est survenue
 };
 fetchProduitApi();
 
-// Afficher le produit sur la page Produit
-const productDisplay = (product) => {
-	// Instructions à passer
-	let productImg = document.querySelector(".item__img");
-	console.log(product);
-};
-productDisplay();
+let productQuantity = document.querySelector("#quantity");
+let productQuantityLabel = document.querySelector("#labelQuantity");
+
+function changeQuantity(valeur) {
+	productQuantityLabel.innerHTML = "Quantité : " + valeur;
+	console.log(valeur);
+}
+
+document.querySelector("#quantity").addEventListener("input", (event) => {
+	let valeur = productQuantity.value;
+	changeQuantity(valeur);
+});
