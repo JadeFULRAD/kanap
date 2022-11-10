@@ -19,19 +19,27 @@ const fetchProduitApi = () => {
 			let productImg = document.querySelector(".item__img");
 			productImg.src = data.imageUrl;
 
-			document.querySelector("#price").innerHTML = data.price;
-			document.querySelector("#title").innerHTML = data.name;
-			document.querySelector("#description").innerHTML = data.description;
-			document.querySelector(".option1").innerHTML = data.colors[0];
-			document.querySelector(".option2").innerHTML = data.colors[1];
-			document.querySelector(".option3").innerHTML = data.colors[2];
-			document.querySelector(".option1").value = data.colors[0];
-			document.querySelector(".option2").value = data.colors[1];
-			document.querySelector(".option3").value = data.colors[2];
+			document.querySelector("#price").innerText = data.price;
+			document.querySelector("#title").innertext = data.name;
+			document.querySelector("#description").innerText = data.description;
+			document.querySelector("#colors").value = data.colors[0];
+			// Boucle
+			for (let i in colors) colors < array.length; index++) {
+				const element = array[index];
+			}
+			//document.querySelector(".option1").innerHTML = data.colors[0];
+			//document.querySelector(".option2").innerHTML = data.colors[1];
+			//document.querySelector(".option3").innerHTML = data.colors[2];
+			//document.querySelector(".option1").value = data.colors[0];
+			//document.querySelector(".option2").value = data.colors[1];
+			//document.querySelector(".option3").value = data.colors[2];
 		})
 		.catch((err) => console.log(err)); // Sinon cette fonction s'exécutera si une erreur est survenue
 };
 fetchProduitApi();
+
+
+//fonction qui récupère la valeur de la quantité du formulaire dans le balisage
 
 let productQuantity = document.querySelector("#quantity");
 let productQuantityLabel = document.querySelector("#labelQuantity");
